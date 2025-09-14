@@ -1,9 +1,46 @@
 import os
+'''
+os.path.exists() - 检查文件或目录是否存在
+
+os.path.join() - 智能拼接路径（处理不同操作系统的路径分隔符）
+
+os.listdir() - 列出目录内容
+
+os.path.isdir() - 判断是否为目录
+
+os.path.isfile() - 判断是否为文件
+
+os.path.basename() - 获取文件名
+
+os.path.splitext() - 分割文件名和扩展名
+
+os.makedirs() - 创建目录（包括父目录）
+'''
 import shutil
+'''
+shutil.move() - 移动文件或目录（比os.rename更强大，可以跨磁盘移动）
+
+还可以用于复制文件、删除目录树等操作
+'''
 import time
+'''
+time.sleep() - 让程序暂停指定秒数（用于等待文件完全写入）
+
+还可以获取当前时间、格式化时间等
+'''
 from pathlib import Path
+'''
+Path() - 创建路径对象，提供各种路径操作方法
+
+虽然在这个脚本中没直接使用，但它是处理文件路径的现代方式
+'''
 from watchdog.observers import Observer
 from watchdog.events import FileSystemEventHandler
+'''
+Observer：监控器，负责监视目录变化
+
+FileSystemEventHandler：事件处理器基类，用于处理文件系统事件
+'''
 
 # 定义文件类型分类
 FILE_CATEGORIES = {
